@@ -12,6 +12,7 @@ public class ProfileForm extends BaseP{
     }
     public RepositoriesPage goToRepositoriesPage(){
         youRepositoriesBtn.click();
-        return new RepositoriesPage(driver);
+        return new RepositoriesPage(driver);}
+
     }
-}
+
