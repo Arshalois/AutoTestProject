@@ -1,0 +1,43 @@
+{
+"$schema": "http://json-schema.org/draft-04/schema#",
+"type": "object",
+"success": "boolean",
+"data":[{
+"Ref" : "integer",
+"SettlementType" : "integer",
+"Latitude" : "integer",
+"Longitude" : "integer",
+"Description" : "array",
+"DescriptionRu" : "array",
+"SettlementTypeDescription" : "array",
+"SettlementTypeDescriptionRu" : "array",
+"Region" : "array",
+"RegionsDescription" : "array",
+"RegionsDescriptionRu" : "array",
+"Area" : "integer",
+"AreaDescription" : "array",
+"AreaDescriptionRu" : "array",
+"Index1" : "integer",
+"Index2" : "integer",
+"IndexCOATSU1" : "integer",
+"Delivery1" : "integer",
+"Delivery2" : "integer",
+"Delivery3" : "integer",
+"Delivery4" : "integer",
+"Delivery5" : "integer",
+"Delivery6" : "integer",
+"Delivery7" : "integer",
+"Warehouse" : "integer",
+"Conglomerates" : [
+"integer",
+"integer"]
+}
+],
+"errors": "String",
+  "warnings": "array",
+  "info":"array",
+  "messageCodes": "array",
+  "errorCodes": "array",
+  "warningCodes": "array",
+  "infoCodes": "integer"
+  }
