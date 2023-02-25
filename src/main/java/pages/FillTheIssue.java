@@ -5,18 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class FillTheIssue extends BaseP {
-<<<<<<< HEAD
     private final static String TITLE = "Isuues";
     WebElement titleField = driver.findElement(By.xpath("//input[@required]"));
     WebElement submitNewIssueBtn = driver.findElement(By.xpath("//*[@class='btn-primary btn ml-2']"));
     public FillTheIssue(WebDriver driver) {
         super(driver,TITLE );
-=======
-    WebElement titleField = driver.findElement(By.xpath("//input[@required]"));
-    WebElement submitNewIssueBtn = driver.findElement(By.xpath("//*[@class='btn-primary btn ml-2']"));
-    public FillTheIssue(WebDriver driver) {
-        super(driver);
->>>>>>> origin/HomeWork11
+
     }
     public FillTheIssue newIssueCreated(String title) {
         //titleField.click();
