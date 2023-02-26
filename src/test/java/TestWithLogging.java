@@ -1,19 +1,16 @@
-import com.google.common.annotations.VisibleForTesting;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pages.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-public class FirstTest extends BaseTest {
+
+public class TestWithLogging extends BaseTest {
 
    @Test
-   public void someChecks(){
+   public void simpleLoginCheck(){
     driver.get("https://github.com/login");
     WebElement loginField = driver.findElement(By.xpath("//input[@id = 'login_field']"));
     loginField.sendKeys("Arshalois");
@@ -48,7 +45,7 @@ public class FirstTest extends BaseTest {
             Assertions.assertEquals(expectedRepList, repositoriesPage.getRepositories());
         }
     @Test
-    public void testIssuesTabDraft() {
+    public void testIssuesPage() {
         HomePage homePage = new HomePage(driver);
         homePage.goToLoginPage();
 
@@ -60,6 +57,4 @@ public class FirstTest extends BaseTest {
         IssueMain issueMain = new IssueMain(driver);
         issueMain.clickOnMyIssue();
 
-        //GitHubLink gitHubLink = new GitHubLink(driver);
-        //gitHubLink.clickOnGitHubLink();
   }}

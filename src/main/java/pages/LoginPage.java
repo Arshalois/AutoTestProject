@@ -28,7 +28,7 @@ public class LoginPage extends BaseP {
         getSignInBtn.click();
 
       log.info("Successful login");
-       // printColorMessage("Successful login", log, Level.INFO);
+       printColorMessage("Successful login", log, Level.INFO);
         return new MainPage(driver);
     }
 }
