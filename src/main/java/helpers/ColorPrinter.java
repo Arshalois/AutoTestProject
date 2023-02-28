@@ -13,10 +13,10 @@ public class ColorPrinter {
                     logger.info(GREEN + message + RESET);
                     break;
                 case DEBUG:
-                    logger.info(BLUE + message + RESET);
+                    logger.debug(BLUE + message + RESET);
                     break;
                 case ERROR:
-                    logger.info(RED + message + RESET);
+                    logger.error(RED + message + RESET);
                     break;
             }
         }
