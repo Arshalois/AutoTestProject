@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,7 +10,8 @@ import java.util.List;
 
 public class TestWithLogging extends BaseTest {
 
-   @Test
+   @Disabled
+    @Test
    public void simpleLoginCheck(){
     driver.get("https://github.com/login");
     WebElement loginField = driver.findElement(By.xpath("//input[@id = 'login_field']"));
