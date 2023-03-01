@@ -2,13 +2,15 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     WebDriver driver;
 
-    @BeforeEach
+    @BeforeMethod
     void setUp() {
         System.setProperty("webdriver.chrome.driver", "/Users/arshaluis/IdeaProjects/AutoTestProject/src/main/resources/drivers/chromedriver");
         driver = new ChromeDriver();
@@ -17,7 +19,7 @@ public class BaseTest {
         driver.get("https://github.com");
 
     }
-    @AfterEach
+    @AfterMethod
     void tearDown() {
         driver.quit();
     }
