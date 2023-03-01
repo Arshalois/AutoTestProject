@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -10,7 +11,8 @@ import java.util.List;
 
 public class TestWithLogging extends BaseTest {
 
-   @Disabled
+
+    @Tag("shorttest")
     @Test
    public void simpleLoginCheck(){
     driver.get("https://github.com/login");
@@ -23,6 +25,7 @@ public class TestWithLogging extends BaseTest {
     getSignInBtn.click();
 
    }
+    @Disabled
     @Test
     public void checkLogoOnTheLoginPage() {
         HomePage homePage = new HomePage(driver);

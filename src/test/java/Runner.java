@@ -6,7 +6,7 @@ import org.junit.platform.suite.api.Suite;
 
 @SelectPackages({"ui"})
 @SelectClasses({TestWithLogging.class})
-//@IncludeTags()
+@IncludeTags("shorttest")
 @Suite
 public  class Runner {
 }
