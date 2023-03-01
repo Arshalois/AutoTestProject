@@ -22,7 +22,7 @@ public class SomeTest extends BaseTest {
        LoginPage loginPage = new LoginPage(driver);
        Assert.assertTrue(loginPage.getLogo().isDisplayed());
     }
-  //@Test
+  @Test
     public void checkRepositoriesList(){
         HomePage homePage = new HomePage(driver);
         homePage.goToLoginPage();
