@@ -25,7 +25,6 @@ public class SomeTest extends BaseTest {
         ProfileForm profileForm = new ProfileForm(driver);
         profileForm.goToRepositoriesPage();
         List <String> expectedRepList = new ArrayList<>();
-        expectedRepList.add("HomeWork")
-Assertions.
+        expectedRepList.add("HomeWork");
     }
 }
