@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage extends BaseP {
 
-    WebElement signInBtn = driver.findElement(By.xpath("//a[contains(text(),\"Sign in\")]"));
+    By signInBtn = By.xpath("//a[contains(text(),\"Sign in\")]");
    private By sloganlOCATOR = By.xpath("//h1");
 private final static String TITLE = "Home page";
 
@@ -16,8 +16,7 @@ private final static String TITLE = "Home page";
     }
 
     public LoginPage goToLoginPage(){
-        signInBtn.click();
+        driver.findElement(signInBtn).click();
         return new LoginPage(driver);
     }
-
 }

@@ -25,7 +25,7 @@ public class ProfileForm extends BaseP{
     public HomePage sinOutFromGitHub(){
         Assertions.assertTrue(driver.findElement(signOutBtn).isDisplayed());
         driver.findElement(signOutBtn).click();
-Assertions.assertEquals("Let's build from here", driver.findElement(signOutBtn).getText());
+Assertions.assertEquals("Let's build from here", driver.findElement(sloganLocator).getText());
     return new HomePage(driver);
     }
 }
