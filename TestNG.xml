@@ -11,7 +11,7 @@
                 </methods>
              </class>
 
-             <class name="SomeTest">
+             <class name="TestForHomeWork12">
                  <methods>
                      <include name="checkLogoOnTheLoginPage"></include>
                  </methods>
