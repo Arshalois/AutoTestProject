@@ -1,3 +1,4 @@
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -47,7 +48,7 @@ public class TestForHomeWork12 extends BaseTest {
     }
 
     @Test(dataProvider = "dataProvider2")
-    public void verifyNegativeLoginTest(String login, String password) {
+    public void verifyNegativeCredentials(String login, String password) {
         HomePage homePage = new HomePage(driver);
         homePage.goToLoginPage();
         LoginPage loginPage = new LoginPage(driver);
@@ -79,4 +80,25 @@ public class TestForHomeWork12 extends BaseTest {
         gitHubLink.clickOnGitHubArticle();
 
     }
-}
+
+   @Test
+    public void verifyNegativeLogin(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goToLoginPage();
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.loginNegative("MArshalois", "69111527Aa");
+        loginPage.validateErrorMessage("Incorrect username and password.");
+    }
+
+   @Test
+    public void verifyLogOutFromGitHub(){
+        HomePage homePage = new HomePage(driver);
+        homePage.goToLoginPage();
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.successfulLogIn("Arshalois", "69111527Aa");
+        MainPage mainPage = new MainPage(driver);
+        mainPage.goToProfileForm();
+        ProfileForm profileForm = new ProfileForm(driver);
+        profileForm.sinOutFromGitHub();
+    }}
+

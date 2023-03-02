@@ -17,7 +17,7 @@ public class BaseTest {
         driver.get("https://github.com");
 
     }
-    @AfterMethod
+   @AfterMethod
     void tearDown() {
         driver.quit();
     }
