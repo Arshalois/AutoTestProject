@@ -62,4 +62,26 @@ public class TestWithLogging extends BaseTest {
         IssueMain issueMain = new IssueMain(driver);
         issueMain.clickOnMyIssue();
 
-  }}
+  }
+
+@Test
+    public void verifyNegativeLogin(){
+    HomePage homePage = new HomePage(driver);
+    homePage.goToLoginPage();
+    LoginPage loginPage = new LoginPage(driver);
+   // loginPage.checkAuthFields();
+    loginPage.loginNegative("MArshalois", "69111527Aa");
+loginPage.validateErrorMessage("Incorrect username and password.");
+}
+
+@Test
+public void verifyLogOut(){
+    HomePage homePage = new HomePage(driver);
+    homePage.goToLoginPage();
+    LoginPage loginPage = new LoginPage(driver);
+    loginPage.successfulLogIn("Arshalois", "69111527Aa");
+    MainPage mainPage = new MainPage(driver);
+    mainPage.goToProfileForm();
+    ProfileForm profileForm = new ProfileForm(driver);
+    profileForm.sinOutFromGitHub();
+}}
