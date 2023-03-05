@@ -1,14 +1,16 @@
 import com.google.common.annotations.VisibleForTesting;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+import org.testng.xml.dom.Tag;
 
 import java.util.concurrent.TimeUnit;
 
 public class FirstTest extends BaseTest{
-@Test
+
+ @Test
    public void someChecks(){
     driver.get("https://github.com/login");
     WebElement loginField = driver.findElement(By.xpath("//input[@id = 'login_field']"));
